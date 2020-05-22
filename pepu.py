@@ -9,16 +9,15 @@ import pygame
 
 
 # Vaihda tähän oikeat numerot 
-#numbers = [1, 2, 4, 8, 9, 10, 14, 15, 16, 21, 22, 25, 27, 28, 30, 33, 42, 44, 53, 54, 55, 60, 69, 75]
+numbers = [1, 2, 4, 8, 9, 10, 14, 15, 16, 21, 22, 25, 27, 28, 30, 33, 42, 44, 53, 54, 55, 60, 69, 75]
 
-numbers = [1,2,3,4,5]
+# numbers = [1,2,3,4,5]
 
 def prob(nums):
     return 1 / len(numbers) * 100
 
-sounds = ["pepu1.wav"]
 pygame.mixer.init()
-pygame.mixer.music.load(random.choice(sounds))
+pygame.mixer.music.load("pepu1.wav")
 
 print("Pepu arvonta alkoi!")
 print("Pelissä mukana", numbers, "yhteensä osallistujia", len(numbers))
@@ -36,7 +35,7 @@ while len(numbers) > 1:
         sleep(0.01)
         print("{}\r".format(number), end="")
         i += 1
-        t += 0.008
+        t += 0.0075
 
     number = random.choice(numbers)
     print("Numero:", number)
