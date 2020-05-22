@@ -1,10 +1,12 @@
 import random
 from playsound import playsound
 
+# Vaihda tähän oikeat numerot 
+numbers = [1,2,3]
+
 def prob(nums):
     return 1 / len(numbers) * 100
 
-numbers = [1,2,3]
 sounds = ["pepu1.mp3", "pepu2.mp3"]
 
 print("Pepu arvonta alkoi!")
